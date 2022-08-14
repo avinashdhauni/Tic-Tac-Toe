@@ -89,6 +89,7 @@ reset.addEventListener('click', () => {
     isGameOver = false;
     document.querySelector('.info').innerText = "Turn For X";
     turn = "X";
+    count = 0;
 })
 
 replayGame.addEventListener('click', () => {
