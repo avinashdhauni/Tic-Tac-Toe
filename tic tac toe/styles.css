@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(176, 121, 229);
+    height:auto;
+}
+nav{
+    background-color: rgb(37, 9, 37);
+    color: #fff;
+    height: 60px;
+    font-size:20px;
+    display:flex;
+    align-items: center;
+    padding: 0 12px;
+    font-family: 'Roboto', sans-serif;
+}
+nav ul{
+    list-style-type: none;
+}
+.gameContainer{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin:20px;
+}
+.container{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'Roboto', sans-serif;
+}
+.box{
+    background:#fff;
+    font-size:5vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    margin:5px;
+}
+.box:hover{
+    transform: scale(105%);
+    cursor:pointer;
+}
+
+.gameInfo{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+.gameInfo h1{
+    margin-top:20px;
+    font-size:50px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.br-0{
+    border-right:0;
+}
+.bl-0{
+    border-left:0;
+}
+.bt-0{
+    border-top:0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+
+#reset, .replay{
+    padding: 15px 35px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    background: #fff;
+    color:blueviolet;
+    border:none;
+    border-radius: 3px;
+    display:block;
+    cursor: pointer;
+}
+.replay{
+    background-color: blueviolet;
+    color:#fff;
+}
+
+.info{
+    display: block;
+    font-family: 'Baloo Bhaina 2', cursive;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.resultBox{
+    margin:50px auto;
+    width:500px;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 5px;
+    visibility: hidden;
+}
+.resultBox h2{
+    display:flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+}
+.resultBox .replay{
+    margin:auto;
+}
+.imgBox img{   
+    display:flex;
+    justify-content: center; 
+    margin:20px auto;
+    width:0;
+}
+
+.show{
+    /* display:block; */
+    visibility: visible;
+}
+
+.hide{
+    display:none;
+}
+
+@media(max-width:970px){
+    .container{
+        display: grid;
+        grid-template-rows: repeat(3, 30vw);
+        grid-template-columns: repeat(3, 30vw);
+        font-family: 'Roboto', sans-serif;
+    }
+    .resultBox{
+        width:90%;
+        padding:30px;
+    }
+    .resultBox h2{
+        font-size: 25px;
+        line-height: 1.5;
+    }
+    .info{
+        font-size: 20px;
+        margin:20px 0;
+        text-align: center;
+    }
+    .box{
+        font-size: 30px;
+    }
+}
